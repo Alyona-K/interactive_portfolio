@@ -1,0 +1,75 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.btn {
+  position: relative;
+  width: 100%;
+  padding: 14px;
+  background-color: $color-black-pearl;
+  border: 1px solid $color-black-pearl;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  justify-content: center;
+  flex-shrink: 0;
+  color: $color-white;
+  cursor: pointer;
+  overflow: hidden;
+
+  @include from-md {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  @include from-xl {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 16px;
+  }
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-toledo;
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+    transition:
+      clip-path 0.5s ease-in-out,
+      background-color 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  &:hover::before {
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+  }
+  &:hover {
+    border-color: $color-toledo;
+  }
+
+  &:not(:hover)::before {
+    clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
+    transition-delay: 0.3s;
+  }
+
+  &:focus-visible {
+    border-color: $color-toledo;
+    background-color: $color-toledo;
+    outline: none;
+  }
+
+  &[disabled],
+  &--disabled {
+    background-color: $color-black-pearl-30;
+    pointer-events: none;
+  }
+
+  .btn__text,
+  .btn__icon {
+    z-index: 10;
+  }
+}

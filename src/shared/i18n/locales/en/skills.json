@@ -1,0 +1,362 @@
+{
+  "skillsTitle": "Skills",
+
+  "techStack": {
+    "title": "Tech Stack",
+    "programmingLanguages": {
+      "title": "Programming Languages",
+      "ts": {
+        "title": "TypeScript",
+        "points": [
+          "Strict mode, generics, utility types",
+          "Interfaces, types, discriminated unions",
+          "Modularity and reusable abstractions",
+          "Error-safe API handling",
+          "Integration with React & Zustand",
+          "Strong typing for forms, schemas, async logic"
+        ]
+      },
+      "js": {
+        "title": "JavaScript (ES6+)",
+        "points": [
+          "Modules, arrow functions, destructuring",
+          "Working with data collections (map, filter, reduce)",
+          "Async/await, Promises, event loop",
+          "DOM & forms control"
+        ]
+      }
+    },
+
+    "frontendFrameworks": {
+      "title": "Frontend stack",
+      "react": {
+        "title": "React (18/19)",
+        "points": [
+          "Functional components and hooks",
+          "Component composition and modular architecture",
+          "Performance optimization (memo, lazy, Suspense)",
+          "Routing with React Router",
+          "Reusable UI components",
+          "Separation of logic and presentation (presentational/container pattern)",
+          "Error boundaries"
+        ]
+      },
+      "stateManagement": {
+        "title": "State Management",
+        "points": [
+          "Zustand (selectors, slices, domain-based structure)",
+          "Local & session persistence",
+          "JWT + refresh flow",
+          "Business logic separation"
+        ]
+      }
+    },
+
+    "architecturePatterns": {
+      "title": "Architecture & Patterns",
+      "fsd": {
+        "title": "Feature-Sliced Design (FSD)",
+        "points": [
+          "Layered architecture (entities, features, shared)",
+          "Modules isolation",
+          "Scalable project structure"
+        ]
+      },
+      "apiDataFlow": {
+        "title": "API & Data Flow",
+        "points": [
+          "REST API integration",
+          "Axios instance with interceptors",
+          "Token handling (access + refresh)"
+        ]
+      },
+      "performanceRendering": {
+        "title": "Performance & Rendering",
+        "points": [
+          "Lazy-loaded pages",
+          "Selective optimization with React.memo",
+          "Smooth page transitions using Framer Motion",
+          "Client-Side Rendering (CSR) with protected routes"
+        ]
+      },
+      "internationalization": {
+        "title": "Internationalization (i18n)",
+        "points": [
+          "react-i18next with namespace-based structure",
+          "Feature-scoped translations aligned with FSD",
+          "Lazy-loaded locale bundles",
+          "Type-safe translation keys",
+          "Runtime language switching without full reload",
+          "Scalable multilingual architecture"
+        ]
+      }
+    },
+
+    "bestPractices": {
+      "title": "Code Best Practices",
+      "points": [
+        "Clear and meaningful names for variables, functions, and files",
+        "Modular structure and separation of concerns",
+        "Keeping logic as simple as possible for the current requirements",
+        "Writing tests for core functionality",
+        "Consistent code formatting and readable comments",
+        "Documenting solutions and edge-case scenarios",
+        "Using native JS/CSS solutions instead of unnecessary libraries when possible"
+      ]
+    },
+
+    "stylesUI": {
+      "title": "Styles & UI",
+      "htmlA11y": {
+        "title": "HTML & Accessibility",
+        "points": [
+          "Semantic markup",
+          "Accessibility best practices (a11y)",
+          "SEO-friendly structure",
+          "Optimized rendering (Lighthouse, Core Web Vitals)"
+        ]
+      },
+      "cssPreproc": {
+        "title": "CSS & Preprocessors",
+        "points": [
+          "SCSS modules",
+          "BEM methodology",
+          "Responsive & adaptive layouts"
+        ]
+      },
+      "animations": {
+        "title": "Animations",
+        "points": [
+          "Framer Motion",
+          "GSAP",
+          "Custom keyframes",
+          "Microinteractions",
+          "Multi-step & chained animations"
+        ]
+      },
+      "visualization": {
+        "title": "Visualization",
+        "points": [
+          "Recharts (line charts, bar charts, custom tooltips)",
+          "Data transformation pipelines"
+        ]
+      }
+    },
+
+    "backend": {
+      "title": "Backend (mock / custom)",
+      "mockBackend": {
+        "title": "Custom mock backend with json-server",
+        "points": [
+          "json-server and json-server-auth with custom server-side logic",
+          "JWT authentication: access and refresh tokens, token refresh endpoint",
+          "Middleware for endpoint protection (authGuard)",
+          "Password hashing with bcrypt",
+          "Soft delete and server-side data filtering",
+          "Normalized data structure",
+          "REST API integration with the frontend"
+        ]
+      }
+    }
+  },
+
+  "tools": {
+    "title": "Tools & Workflow",
+    "devToolsEnv": {
+      "title": "Dev Tools & Environment",
+      "vite": {
+        "title": "Vite",
+        "points": [
+          "Fast builds",
+          "Hot-reloading",
+          "Optimized production bundles"
+        ]
+      },
+      "nodeNpm": {
+        "title": "Node.js & npm",
+        "points": ["Package management", "Scripts", "Local servers"]
+      },
+      "gitGithub": {
+        "title": "Git & GitHub",
+        "points": ["Branching", "Merging", "Rebasing", "Pull requests"]
+      },
+      "eslintPrettier": {
+        "title": "ESLint & Prettier",
+        "points": ["Linting", "Formatting", "Code consistency"]
+      },
+      "browserDevtools": {
+        "title": "Browser DevTools",
+        "points": ["Debugging", "Network monitoring", "Performance audits"]
+      }
+    },
+
+    "testingQA": {
+      "title": "Testing & QA",
+      "jest": {
+        "title": "Jest",
+        "points": ["Unit", "Integration", "Snapshot testing"]
+      },
+      "rtl": {
+        "title": "React Testing Library (RTL)",
+        "points": ["Component testing", "UI state verification"]
+      },
+      "mockApi": {
+        "title": "Mocking & API testing",
+        "points": ["Simulating backend responses", "Edge-case coverage"]
+      },
+      "playwright": {
+        "title": "Playwright",
+        "points": [
+          "End-to-end (E2E) testing",
+          "Cross-browser checks",
+          "Viewport- and scroll-based behavior verification",
+          "Interactive component flows"
+        ]
+      }
+    },
+
+    "ciCD": {
+      "title": "CI/CD & Deployment",
+      "githubActions": {
+        "title": "GitHub Actions",
+        "points": ["Automated linting", "Testing", "Builds"]
+      },
+      "vercel": {
+        "title": "Vercel",
+        "points": [
+          "Preview deployments",
+          "Production hosting",
+          "Build optimization"
+        ]
+      }
+    },
+
+    "designPrototyping": {
+      "title": "Design & Prototyping",
+      "figma": {
+        "title": "Figma",
+        "points": ["Working with layouts", "Pixel-perfect implementation"]
+      }
+    },
+
+    "buildOptimization": {
+      "title": "Build & Optimization",
+      "webpackVite": {
+        "title": "Webpack / Vite",
+        "points": [
+          "Tree shaking",
+          "Code splitting",
+          "Image optimization (WebP)",
+          "Build performance tuning",
+          "Environment configuration (env variables, multi-stage configs)"
+        ]
+      }
+    }
+  },
+
+  "softSkills": {
+    "title": "Soft Skills",
+    "systemThinking": {
+      "title": "System Thinking",
+      "points": [
+        "Break down complex frontend problems into manageable parts and design clear solutions.",
+        "Apply structured thinking for code architecture, feature planning, and bug resolution.",
+        "Optimize performance, identify bottlenecks, and foresee edge cases in applications."
+      ]
+    },
+
+    "ownershipResponsibility": {
+      "title": "Ownership & Responsibility",
+      "points": [
+        "Take full ownership of features from planning to production.",
+        "Ensure code quality, maintainability, and scalability of the modules you work on.",
+        "Monitor feature performance and implement improvements proactively."
+      ]
+    },
+
+    "clearCommunication": {
+      "title": "Clear & Effective Communication",
+      "points": [
+        "Communicate technical concepts clearly to team members and non-technical stakeholders.",
+        "Write meaningful commit messages, documentation, and code comments.",
+        "Reduce ambiguity in requirements by asking precise questions and giving actionable suggestions."
+      ]
+    },
+
+    "collaborationTeamwork": {
+      "title": "Collaboration & Teamwork",
+      "points": [
+        "Coordinate effectively with team members, designers, and project leads.",
+        "Participate in project discussions and provide constructive feedback.",
+        "Adapt to workflows and contribute efficiently to shared projects."
+      ]
+    },
+
+    "adaptabilityLearning": {
+      "title": "Adaptability & Fast Learning",
+      "points": [
+        "Quickly learn new technologies, libraries, and architectural patterns.",
+        "Explore unfamiliar topics, experiment, and find optimal solutions.",
+        "Adjust smoothly to changing requirements and project priorities."
+      ]
+    }
+  },
+
+  "crossFunctionalSkills": {
+    "title": "Cross-Functional Skills",
+    "productThinking": {
+      "title": "Product Thinking",
+      "points": [
+        "Drive features end-to-end: from requirements and constraints to final delivery.",
+        "Clarify goals, use cases, risks, and edge scenarios.",
+        "Build interfaces that solve real problems, not just look good."
+      ]
+    },
+
+    "uxMindset": {
+      "title": "UX Mindset",
+      "points": [
+        "Strong sense of visual hierarchy, spacing, rhythm, and typography.",
+        "Translate designs into clean, structured UI code.",
+        "Work confidently with design systems, reusable patterns, and consistent styling.",
+        "Design UI resilient to multilingual content (i18n-aware layouts).",
+        "Mobile-first UX and responsive layout strategy"
+      ]
+    },
+
+    "componentThinking": {
+      "title": "Component Thinking",
+      "points": [
+        "View the UI as a system of interconnected components.",
+        "Build clear and scalable architecture for layouts, logic, and component structures.",
+        "Apply principles of modularity and reusability."
+      ]
+    },
+
+    "documentationWriting": {
+      "title": "Documentation Writing",
+      "points": [
+        "Create precise documentation, specs, and user flows.",
+        "Record decisions, edge cases, and implementation details.",
+        "Maintain clarity for the team through structured writing."
+      ]
+    },
+
+    "iterationOptimization": {
+      "title": "Iteration & Optimization",
+      "points": [
+        "Improve processes, workflows, and performance iteratively.",
+        "Approach solutions with an efficiency-first mindset."
+      ]
+    },
+
+    "visualTechnicalPrecision": {
+      "title": "Visual & Technical Precision",
+      "points": [
+        "Pay attention to details in layouts, animations, and interactions.",
+        "Ensure pixel accuracy and interface consistency.",
+        "Deliver UI that both works well and feels refined."
+      ]
+    }
+  }
+}

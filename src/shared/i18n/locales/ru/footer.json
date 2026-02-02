@@ -1,0 +1,10 @@
+{
+  "title": "Пообщаемся?",
+
+  "socialTooltips": {
+    "linkedin": "Профессиональный профиль на LinkedIn",
+    "github": "Смотрите мой код на GitHub",
+    "telegram": "Связаться через Telegram",
+    "instagram": "Иллюстрации и творчество"
+  }
+}

@@ -1,0 +1,104 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.download-dropdown {
+  position: relative;
+  width: 100%;
+  
+  @include from-sm {
+    max-width: 400px;
+  }
+  @include from-md {
+    max-width: 220px;
+  }
+
+  @include from-xl {
+    max-width: 255px;
+  }
+
+  &__menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: $color-black-pearl;
+    border: 1px solid $color-black-pearl;
+    transform-origin: top;
+    animation-fill-mode: forwards;
+  }
+
+  &__menu.open {
+    animation: download-dropdown-open $transition-300 forwards;
+  }
+
+  &__menu.closing {
+    animation: download-dropdown-close $transition-300 forwards;
+  }
+
+  &__link {
+    display: flex;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 10px 15px;
+    background-color: $color-white;
+    color: $color-black-pearl;
+    transition:
+      background-color $transition-300,
+      color $transition-300;
+
+    @include from-md {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__link:hover {
+    background-color: $color-dark-gray;
+    color: $color-white;
+  }
+
+  &__btn {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include from-md {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @include from-xl {
+      font-size: 18px;
+      line-height: 20px;
+      padding: 15px;
+    }
+  }
+
+  @keyframes download-dropdown-open {
+    from {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes download-dropdown-close {
+    from {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+    to {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  color: $color-chardon;
+
+  @include from-md {
+    min-width: auto;
+  }
+  @include from-xl {
+    min-width: auto;
+  }
+
+  &__field {
+    border: 2px solid $color-chardon;
+    border-radius: 8px;
+    color: $color-chardon;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    padding: 14px 16px 14px 90px;
+    width: 100%;
+    transition: border $transition-300;
+
+        @include from-md {
+    padding: 16px 16px 16px 90px;
+    }
+
+    @include from-xl {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 14px 16px 14px 120px;
+    }
+  }
+
+  &__field:hover,
+  &__field:focus-visible,
+  &__field:focus {
+    outline: none;
+    border: 2px solid $color-dark-gray;
+  }
+
+  &__field:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #af9991 inset; 
+    -webkit-text-fill-color: $color-chardon; 
+    transition: background-color 5000s ease-in-out 0s; 
+  }
+
+  &__field::placeholder {
+    color: $color-chardon;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__label {
+    position: absolute;
+    transform: translateY(-50%);
+    left: 13px;
+    top: 50%;
+    font-family: inherit;
+    color: $color-chardon;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+
+    @include from-xl {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__icon {
+    color: $color-chardon;
+    left: 16px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

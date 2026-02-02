@@ -1,0 +1,182 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.footer {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-toledo;
+  color: $color-white;
+  transition: opacity 0.6s ease;
+
+  &__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__heading {
+    margin: 0 auto 30px;
+    font-size: 38px;
+    line-height: 46px;
+    color: $color-chardon;
+
+    @include from-md {
+      font-size: 76px;
+      line-height: 80px;
+      margin: 0 auto 40px;
+    }
+
+    @include from-xl {
+      font-size: 100px;
+      line-height: 130px;
+      margin: 0 auto 50px;
+    }
+  }
+
+  &__photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    box-shadow: 0 0 35px $color-black-pearl;
+    object-fit: cover;
+
+    @include from-md {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto 20px;
+    }
+
+    @include from-xl {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__contacts-name {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    margin: 0 auto 15px;
+    color: $color-chardon;
+
+    @include from-md {
+      font-size: 26px;
+      line-height: 28px;
+      margin: 0 auto 20px;
+    }
+
+    @include from-xl {
+      font-size: 30px;
+      line-height: 32px;
+      margin: 0 auto 20px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+
+    @include from-md {
+      gap: 7px;
+      margin: 0 auto 50px;
+    }
+
+    @include from-xl {
+      gap: 7px;
+      margin: 0 auto 50px;
+    }
+  }
+
+  &__contacts-text {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $color-chardon;
+    margin: 0 auto;
+
+    @include from-md {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include from-xl {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link-icon {
+    transition:
+      filter $transition-300,
+      transform $transition-300;
+  }
+
+  &__link:hover .footer__link-icon {
+    filter: drop-shadow(0 0 5px $color-chardon);
+    transform: translateY(-5px);
+  }
+
+  &__link[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 160%;
+    left: 50%;
+    display: block;
+    width: 180px;
+    background: $color-white;
+    color: $color-black-pearl;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    font-family: $ff-secondary;
+    text-align: center;
+    border-radius: 4px;
+    white-space: normal;
+    word-wrap: break-word;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(-50%) translateY(8px) scale(0);
+
+    transform-origin: bottom center;
+    transition:
+      opacity $transition-300,
+      transform $transition-300;
+
+    @include from-md {
+      width: 200px;
+      padding: 10px 15px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &__link[data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}

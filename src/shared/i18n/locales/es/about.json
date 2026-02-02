@@ -1,0 +1,10 @@
+{
+  "title": "Sobre mí",
+  "text": {
+    "p1": "Soy desarrolladora frontend con una sólida base en producto, construida durante más de 11 años en el diseño de moda. Antes de pasar al mundo tech, lideré el desarrollo completo de productos — desde la idea y la arquitectura del sistema hasta la documentación técnica, la colaboración con stakeholders y la optimización iterativa.",
+    "p2": "Esta experiencia evolucionó de forma natural hacia el frontend: pienso en componentes, entiendo cómo escalan los sistemas y me importa el equilibrio entre estética, usabilidad y mantenibilidad.",
+    "p3": "Actualmente me enfoco en crear interfaces limpias, fiables y bien estructuradas usando JavaScript, TypeScript, React y herramientas modernas. Disfruto especialmente los retos donde la ingeniería se cruza con la creatividad: animaciones, diseño de interacción, optimización de rendimiento y transformación de requisitos complejos en flujos intuitivos.",
+    "p4": "Mi objetivo es crecer como frontend engineer, asumir responsabilidad sobre features, contribuir a design systems y entregar experiencias de usuario de alta calidad dentro de equipos colaborativos."
+  },
+  "photoAlt": "Una mujer con el cabello castaño hasta los hombros mira a la cámara con confianza. Lleva una chaqueta oscura y transmite una imagen profesional sobre un fondo gris."
+}

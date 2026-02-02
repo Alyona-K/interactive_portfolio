@@ -1,0 +1,38 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.contact-result {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  @include from-md {
+    gap: 15px;
+  }
+
+  @include from-xl {
+    gap: 20px;
+  }
+
+  &__text {
+    font-family: $ff-secondary;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0;
+
+    @include from-md {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @include from-xl {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+}

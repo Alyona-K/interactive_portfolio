@@ -1,0 +1,64 @@
+{
+  "buttons": {
+    "learnMore": "Ver más",
+    "view": "Ver",
+    "close": "Cerrar",
+    "submit": "Enviar",
+    "send": "Enviar",
+    "download": "Descargar",
+    "downloadCV": "Descargar CV",
+    "cancel": "Cancelar"
+  },
+
+  "labels": {
+    "stack": "Tecnologías",
+    "links": "Enlaces",
+    "demo": "Demo",
+    "github": "GitHub",
+    "video": "Grabación de pantalla"
+  },
+
+  "states": {
+    "loading": "Cargando…",
+    "sending": "Enviando…",
+    "error": "Algo salió mal",
+    "notFound": "No encontrado"
+  },
+
+  "lang": {
+    "en": "Inglés",
+    "es": "Español",
+    "ru": "Ruso"
+  },
+
+  "formLabels": {
+    "name": "Nombre:",
+    "company": "Empresa:",
+    "placeholder": "Escribe tu mensaje aquí"
+  },
+
+  "errors": {
+    "name": {
+      "required": "El nombre es obligatorio",
+      "invalid": "El nombre solo puede contener letras"
+    },
+    "company": {
+      "required": "La empresa es obligatoria"
+    },
+    "email": {
+      "required": "El email es obligatorio",
+      "invalid": "El email no es válido"
+    },
+    "message": {
+      "minLength": "El mensaje debe tener al menos 10 caracteres",
+      "forbiddenContent": "El mensaje contiene contenido no permitido"
+    }
+  },
+
+  "formMessages": {
+    "successTitle": "Mensaje enviado",
+    "success": "Tu mensaje ha sido enviado. ¡Gracias!",
+    "errorTitle": "Error",
+    "error": "Por favor, inténtalo de nuevo más tarde."
+  }
+}

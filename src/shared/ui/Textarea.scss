@@ -1,0 +1,77 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.custom-textarea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  position: relative;
+
+  @include from-md {
+    min-width: auto;
+  }
+  @include from-xl {
+    min-width: auto;
+  }
+
+  &__field {
+    resize: none;
+    padding: 12px 10px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 8px;
+    border: 2px solid $color-chardon;
+    background-color: $color-chardon-25;
+    color: $color-chardon;
+    font-family: inherit;
+    min-height: 145px;
+    transition: border $transition-300;
+
+    @include from-xl {
+      padding: 12px 16px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__field:hover,
+  &__field:focus-visible,
+  &__field:focus {
+    outline: none;
+    border: 2px solid $color-dark-gray;
+  }
+
+  &__field::placeholder {
+    color: $color-chardon;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+
+    @include from-xl {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    left: 13px;
+    top: 10px;
+    font-family: inherit;
+    color: $color-chardon;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+
+    @include from-md {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include from-xl {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

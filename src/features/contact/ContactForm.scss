@@ -1,0 +1,86 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.contact-form {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  &__columns {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+
+    @include from-sm {
+      width: 80%;
+    }
+
+    @include from-md {
+      flex-direction: row;
+      gap: 0 30px;
+      justify-content: space-between;
+      width: 90%;
+    }
+
+    @include from-lg {
+      width: 80%;
+    }
+
+    @include from-xl {
+      gap: 0 55px;
+      width: 75%;
+    }
+  }
+
+  &__left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+
+    @include from-md {
+      justify-content: space-between;
+    }
+  }
+
+  &__right-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 15px;
+  }
+
+  &__btn {
+    @include from-md {
+      margin-top: auto;
+    }
+  }
+
+  &__input-wrap {
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  &__error {
+    color: $color-error;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+
+    @include from-md {
+      font-size: 14px;
+      line-height: 16px;
+      bottom: -16px;
+    }
+  }
+}

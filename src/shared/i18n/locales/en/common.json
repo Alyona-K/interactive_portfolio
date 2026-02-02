@@ -1,0 +1,64 @@
+{
+  "buttons": {
+    "learnMore": "Learn more",
+    "view": "View",
+    "close": "Close",
+    "submit": "Submit",
+    "send": "Send",
+    "download": "Download",
+    "downloadCV": "Download CV",
+    "cancel": "Cancel"
+  },
+
+  "labels": {
+    "stack": "Stack",
+    "links": "Links",
+    "demo": "Demo",
+    "github": "GitHub",
+    "video": "Screen recording"
+  },
+
+  "states": {
+    "loading": "Loading…",
+    "sending": "Sending…",
+    "error": "Something went wrong",
+    "notFound": "Not found"
+  },
+
+  "lang": {
+    "en": "English",
+    "es": "Spanish",
+    "ru": "Russian"
+  },
+
+  "formLabels": {
+    "name": "Name:",
+    "company": "Company:",
+    "placeholder": "Type your message here"
+  },
+
+  "errors": {
+    "name": {
+      "required": "Name is required",
+      "invalid": "Name can only contain letters"
+    },
+    "company": {
+      "required": "Company is required"
+    },
+    "email": {
+      "required": "Email is required",
+      "invalid": "Invalid email address"
+    },
+    "message": {
+      "minLength": "Message must be at least 10 characters",
+      "forbiddenContent": "Message contains forbidden content"
+    }
+  },
+
+  "formMessages": {
+    "successTitle": "Message sent",
+    "success": "Your message has been sent. Thank you!",
+    "errorTitle": "Something went wrong",
+    "error": "Please try again later."
+  }
+}

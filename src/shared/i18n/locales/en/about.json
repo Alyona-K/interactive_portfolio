@@ -1,0 +1,10 @@
+{
+  "title": "About Me",
+  "text": {
+    "p1": "I am a frontend developer with a strong product background built over 11 years in fashion design. Before transitioning into tech, I led full-cycle product development — from concept and system architecture to technical documentation, collaboration with stakeholders, and iterative optimization.",
+    "p2": "This experience naturally evolved into frontend: I think in components, understand how systems scale, and care about the balance between aesthetics, usability, and maintainability.",
+    "p3": "Today, I focus on building clean, reliable, and thoughtfully structured interfaces using JavaScript, TypeScript, React, and modern tooling. I enjoy tasks where engineering meets creativity — animations, interaction design, performance tuning, and transforming complex requirements into intuitive user flows.",
+    "p4": "My goal is to grow into a confident frontend engineer who can take ownership of features, contribute to design systems, and deliver high-quality user experiences as part of a collaborative team."
+  },
+  "photoAlt": "A woman with shoulder-length brown hair looks confidently at the camera. She wears a dark blazer, conveying a professional and poised demeanor against a gray background."
+}

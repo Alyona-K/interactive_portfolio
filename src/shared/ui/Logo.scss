@@ -1,0 +1,86 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.logo {
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+
+  &__wrap {
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 86px;
+    height: 35px;
+
+    @include from-xl {
+      width: 134px;
+      height: 51px;
+    }
+  }
+
+  &__part-1,
+  &__part-2,
+  &__part-3 {
+    mask-image: linear-gradient(to right, $color-black 0%, $color-black 100%);
+    mask-repeat: no-repeat;
+    mask-size: 0% 100%;
+    mask-position: left;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      $color-black 0%,
+      $color-black 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 0% 100%;
+    -webkit-mask-position: left;
+    fill: none;
+    stroke: $color-white;
+    stroke-width: 2;
+    opacity: 1;
+  }
+
+  &__part-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 17px;
+    height: 7px;
+
+    @include from-xl {
+      width: 27px;
+      height: 10px;
+    }
+  }
+
+  &__part-2 {
+    position: absolute;
+    bottom: 2px;
+    left: 9px;
+
+    width: 62px;
+    height: 31px;
+
+    @include from-xl {
+      width: 100px;
+      height: 50px;
+      bottom: 2px;
+      left: 15px;
+    }
+  }
+
+  &__part-3 {
+    position: absolute;
+    bottom: 0;
+    left: 62px;
+    width: 22px;
+    height: 33px;
+
+    @include from-xl {
+      width: 33px;
+      height: 53px;
+      left: 103px;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "projects": {
+    "section": {
+      "title": "Latest projects",
+      "projectCardHint": "Tap the image for more details"
+    },
+
+    "sections": {
+      "overview": "Overview",
+      "whatIBuilt": "What I Built",
+      "challenges": "Challenges & Solutions",
+      "challenge": "Challenge",
+      "solution": "Solution",
+      "stack": "Tech Stack",
+      "links": "Links"
+    },
+
+    "portfolio": {
+      "title": "Interactive Portfolio",
+      "modalTitle": "A modern, animated, React-based portfolio built to showcase my engineering approach, projects, and attention to UI detail",
+      "alt": "Person typing on a laptop displaying analytics charts and graphs. A vase of pink roses sits nearby on a wooden desk by a window with soft daylight.",
+      "overview": "This portfolio isn’t just a landing page — it’s a fully crafted mini-project designed to demonstrate how I approach UI architecture, animations, content structure, and interactive elements. The goal was simple: build a personal website that feels polished, expressive, and professional while giving a clear view of my skills.",
+      "whatIBuilt": [
+        "Component-driven architecture using React and TypeScript with clear separation of concerns",
+        "Modular file structure inspired by Feature-Sliced Design for scalability and domain isolation",
+        "Reusable UI blocks: buttons, grids, cards, modals, layout components",
+        "Multilingual support (i18n) with HTML `lang` synchronization and a separate font for Cyrillic",
+        "State- and scroll-driven animations: GSAP for intro and scroll effects, Framer Motion for interactive modals",
+        "Scroll-driven project card animations with a 'View' tooltip that follows the cursor",
+        "Modal windows that block background scrolling and display detailed project presentations",
+        "Contact form with EmailJS for sending messages without a backend, featuring client-side validation, multilingual support, and a result modal",
+        "Fully responsive layout across all screen sizes",
+        "Resume download available in three languages",
+        "Semantic and accessible markup with UX and ARIA considerations",
+        "Custom visuals generated for each project",
+        "Project fully covered by unit, integration, and end-to-end (Playwright) tests ensuring UI correctness and scroll/animation behaviors"
+      ],
+      "challenges": [
+        {
+          "challenge": "Ensure proper multi-language support with HTML `lang` synchronization and a separate font for Cyrillic characters.",
+          "solution": "Structured translations using namespaces and created a project configuration layer isolated from UI logic, simplifying multilingual support, content scalability, and correct Cyrillic rendering."
+        },
+        {
+          "challenge": "Create smooth scroll-driven animations for project cards on all screen sizes, with an interactive 'View' tooltip following the cursor.",
+          "solution": "Used GSAP matchMedia with separate timelines for mobile, tablet, and desktop, and implemented the tooltip by tracking cursor position for a smooth and responsive UX."
+        },
+        {
+          "challenge": "Dropdown menus in the Skills section overlapped and broke UX when buttons were stacked vertically.",
+          "solution": "Leveraged React Portals to render submenus above other elements, maintaining correct z-index and preventing accessibility and navigation issues."
+        },
+        {
+          "challenge": "Implement a working contact form without a backend, with validation, multilingual support, and proper error handling.",
+          "solution": "Used EmailJS to send emails via a cloud service, connected my personal account and email. Added client-side validation using Zod, a modal to display submission results, and disabled the submit button during sending to ensure smooth and safe UX."
+        }
+      ],
+      "stack": "React 19, TypeScript, GSAP, Framer Motion, i18n, EmailJS, Jest, React Testing Library, Playwright, Vite, SCSS / CSS Modules"
+    },
+
+    "fintrack": {
+      "title": "FinTrack",
+      "modalTitle": "Full-Stack SPA for managing expenses, analytics, and personal budgeting",
+      "alt": "A laptop displaying code sits on a wooden desk beside a notebook with a pen, eyeglasses, a cup of coffee, a plant, and a stack of papers reading `Hello World`.",
+      "overview": "Originally planned as a compact frontend demo, this project was intentionally expanded into a full-featured application with authentication, analytics, CRUD operations, and a modular architecture. It includes two versions — demo and full-stack - to showcase both a pure SPA setup and integration with a custom backend layer, including authentication flows, session management, and server-side logic.",
+      "whatIBuilt": [
+        "Feature-Sliced Design architecture with clear domain separation and isolated layers",
+        "Complete authentication flow: login, registration, demo user, refresh tokens, and persistent sessions",
+        "Data-heavy UI with tables, filtering, forms, and modal workflows designed for complex user interactions",
+        "Expense analytics with charts, widgets, and category/date-based filtering",
+        "Full CRUD for transactions and categories with reactive state updates",
+        "Custom backend layer on Node.js (json-server-auth) with JWT-based authentication, refresh token rotation, soft delete, and server-side filtering",
+        "CI/CD pipeline including testing, linting, build, and deployment to Vercel",
+        "Test coverage: Jest + RTL, unit, snapshot & integration tests, mocked API/store, fully isolated from backend"
+      ],
+      "challenges": [
+        {
+          "challenge": "Implementing secure and persistent sessions using json-server-auth, which does not support refresh tokens out of the box.",
+          "solution": "Extended the server logic with a custom refresh endpoint, refresh token rotation, and synchronized session state handling on the client."
+        },
+        {
+          "challenge": "Maintaining smooth state updates without unnecessary rerenders in a data-intensive interface.",
+          "solution": "Reworked state management using Zustand with selector-based subscriptions to localize updates and reduce UI overhead."
+        },
+        {
+          "challenge": "Keeping the codebase scalable and maintainable as the feature set grew.",
+          "solution": "Introduced Feature-Sliced Design with isolated layers, domain-oriented modules, and reusable UI components."
+        }
+      ],
+      "stack": "React 19, TypeScript, Zustand, Node.js, json-server-auth, Recharts, Framer Motion, Vite, Jest, React Testing Library"
+    },
+
+    "briaton": {
+      "title": "Briaton Catalog",
+      "modalTitle": "Dynamic Product Catalog",
+      "alt": "Dimly lit restaurant interior with several set tables, upholstered chairs, wine glasses, and candles, creating an elegant and intimate dining atmosphere.",
+      "overview": "An interactive web catalog for an online lighting store, developed as a test assignment for the digital studio AffArts. The project focuses on pure JavaScript logic, dynamic data rendering, and rich UI interactions — without frameworks. Responsive layout is intentionally handled in a separate portfolio project; this one highlights JavaScript-driven functionality.",
+      "whatIBuilt": [
+        "Dynamic rendering of product cards from JSON data",
+        "Product filtering by type and availability, sorting by price and popularity",
+        "Pagination for large catalogs",
+        "Interactive shopping cart with add/remove actions and live total recalculation",
+        "City-based stock availability displayed via tooltips",
+        "“Products of the Day” slider built with Swiper.js",
+        "FAQ accordion with controlled open/close behavior",
+        "Form validation and submission with success/error modals",
+        "Modular JavaScript architecture for maintainable and scalable code"
+      ],
+      "challenges": [
+        {
+          "challenge": "Building complex client-side logic without using a framework.",
+          "solution": "Split functionality into isolated modules and components, clearly separating catalog logic, cart behavior, filters, and UI elements."
+        },
+        {
+          "challenge": "Maintaining a smooth and understandable UI with many interactive elements.",
+          "solution": "Integrated external libraries (Swiper.js, Tippy.js, JustValidate) and connected them to custom business logic via clean JavaScript."
+        },
+        {
+          "challenge": "Keeping catalog, filters, and cart state in sync without global state management.",
+          "solution": "Managed state through local data structures and controlled DOM updates."
+        }
+      ],
+      "stack": "Vanilla JS, SCSS, Swiper.js, Tippy.js, JustValidate"
+    },
+
+    "pawtastic": {
+      "title": "Pawtastic",
+      "modalTitle": "Adaptive Landing Page",
+      "alt": "A couple lovingly cuddles a golden retriever puppy, their faces close and smiling softly. The warm, cozy setting conveys joy and tenderness.",
+      "overview": "A responsive homepage for an online pet store, built with pure HTML and SCSS, with a strong focus on Pixel Perfect layout, accessibility, and performance. The project was developed from a Figma design as part of a professional web development course, incorporating bug lists, team lead code reviews, and client requirements.",
+      "whatIBuilt": [
+        "Pixel-perfect layout implementation based on a Figma design (±10px tolerance)",
+        "Fully adaptive and elastic layout from 360px to 4000px",
+        "Semantic and accessible HTML5 structure",
+        "Modular SCSS architecture using the BEM methodology",
+        "Responsive layouts built with Flexbox and CSS Grid",
+        "Smooth animations and hover interactions optimized for performance",
+        "Retina-ready image optimization with lazy loading",
+        "SVG sprite usage and vector graphic optimization",
+        "Preparation for top Lighthouse performance scores"
+      ],
+      "challenges": [
+        {
+          "challenge": "Maintaining pixel-perfect accuracy across a wide range of screen sizes.",
+          "solution": "Designed an elastic layout system using Flexbox and CSS Grid with carefully calculated containers and spacing."
+        },
+        {
+          "challenge": "Adding animations without negatively impacting performance metrics.",
+          "solution": "Used GPU-accelerated CSS transitions, optimized raster images, and predefined media dimensions to avoid layout shifts."
+        },
+        {
+          "challenge": "Meeting accessibility requirements while preserving visual design.",
+          "solution": "Applied semantic HTML, ARIA attributes, proper focus states, and predictable interactive areas."
+        }
+      ],
+      "stack": "HTML5, SCSS, BEM"
+    }
+  }
+}

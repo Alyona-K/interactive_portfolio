@@ -1,0 +1,42 @@
+import React from "react";
+import { AccordionDropdown } from "@/shared/ui/AccordionDropdown";
+import { crossFunctionalSkills } from "@/entities/skills/model/crossFunctional.data";
+
+interface Props {
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+export const CrossFunctionalSkillsAccordion: React.FC<Props> = ({
+  isOpen,
+  onToggle,
+}) => {
+  return (
+    <AccordionDropdown
+      items={crossFunctionalSkills}
+      level={1}
+      isOpen={isOpen}
+      onToggle={onToggle}
+    />
+  );
+};
+
+export default CrossFunctionalSkillsAccordion;
+
+// import React from "react";
+// import { AccordionDropdown } from "@/shared/ui/AccordionDropdown";
+// import { useAccordionBehavior } from "@/shared/hooks/useAccordionBehavior";
+// import { crossFunctionalSkills } from "@/entities/skills/model/crossFunctional.data";
+
+// export const CrossFunctionalSkillsAccordion: React.FC = () => {
+//   const { multiple } = useAccordionBehavior();
+//   return (
+//     <AccordionDropdown
+//       items={crossFunctionalSkills}
+//       multiple={multiple}
+//       level={1}
+//     />
+//   );
+// };
+
+// export default CrossFunctionalSkillsAccordion;

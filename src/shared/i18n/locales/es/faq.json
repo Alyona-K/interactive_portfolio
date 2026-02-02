@@ -1,0 +1,31 @@
+{
+  "section": {
+    "sectionTitle": "Preguntas Frecuentes"
+  },
+  "cards": {
+    "careerSwitch": {
+      "question": "¿Por qué cambié a IT y elegí el desarrollo frontend?",
+      "answer": "Porque buscaba un campo donde el crecimiento no tenga límites y dependa directamente de cómo pienso y construyo. El frontend combina lógica, interactividad e impacto visible: escribo código y veo de inmediato cómo cambia la experiencia del usuario. Esa mezcla de estructura y creatividad es el entorno en el que me veo a largo plazo."
+    },
+    "designBackground": {
+      "question": "¿Cómo me ayuda mi experiencia en diseño como desarrolladora?",
+      "answer": "Años en diseño me enseñaron a pensar en sistemas: componentes, patrones, flujos de usuario y jerarquía visual. Ahora aplico esa misma forma de pensar al código: estructuro funcionalidades, mantengo una arquitectura limpia y tomo decisiones de UI que son tanto amigables para el usuario como técnicamente sólidas. Además, detecto inconsistencias y problemas de interfaz muy rápido, antes de que se conviertan en bugs."
+    },
+    "favoriteTasks": {
+      "question": "¿Qué tipo de tareas me motivan más?",
+      "answer": "Todo lo que combine ingeniería con interactividad: interfaces complejas, optimización del renderizado, animaciones, flujos fluidos y componentes con lógica. Me gustan las tareas en las que el resultado final se siente “vivo”: no solo layouts, sino experiencias."
+    },
+    "careerGoals": {
+      "question": "¿Cuáles son mis objetivos profesionales a largo plazo?",
+      "answer": "Crecer como frontend engineer sólida, que trabaje con confianza en arquitecturas a gran escala, entienda en profundidad JavaScript y los internals de React, se enfoque en rendimiento y DX, y contribuya al producto, no solo al código. Y con el tiempo, mentorizar a otros y ayudar a definir procesos."
+    },
+    "teamEnvironment": {
+      "question": "¿Qué tipo de equipo y entorno valoro?",
+      "answer": "Un equipo donde la comunicación sea clara, las expectativas transparentes y el aprendizaje algo natural, no un extra. Trabajo mejor en entornos donde el conocimiento se comparte abiertamente, se respeta el tiempo de los demás y se construyen cosas con intención, no solo para “sacar la tarea”."
+    },
+    "motivation": {
+      "question": "¿Qué me motiva más allá de las tareas y las tecnologías?",
+      "answer": "Entender por qué construimos algo y cómo impacta en los usuarios. Me gusta analizar el producto desde una perspectiva de pensamiento sistémico: cómo se conectan las funcionalidades, cómo las decisiones se propagan por todo el código y cómo los pequeños detalles influyen en la experiencia."
+    }
+  }
+}

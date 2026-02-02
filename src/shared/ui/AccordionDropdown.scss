@@ -1,0 +1,140 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.dd {
+  margin: 0 auto;
+
+  @include from-md {
+    z-index: 1000;
+  }
+
+  &__item {
+    position: relative;
+    height: max-content;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: $ff-main;
+    cursor: pointer;
+    background-color: $color-black-pearl;
+    color: $color-chardon;
+    font-weight: 600;
+    border: transparent;
+    padding: 11px 12px;
+    border-radius: 4px;
+    z-index: 1;
+
+    @include from-md {
+      max-width: 290px;
+      padding: 13px 11px;
+    }
+
+    @include from-lg {
+      max-width: 340px;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 13px 11px;
+    }
+
+    @include from-xxl {
+      width: 335px;
+      font-size: 20px;
+      line-height: 28px;
+      padding: 15px 11px;
+    }
+  }
+
+  &__arrow {
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: scaleY(-1);
+    }
+
+    @include from-md {
+      width: 22px;
+      height: 22px;
+    }
+
+    @include from-xl {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__dropdown {
+    position: relative;
+    z-index: 1000;
+
+    &.absolute {
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  &__list {
+    list-style: disc;
+    margin: -1px 0 0;
+    padding: 14px 12px 20px 36px;
+    border: 1px solid $color-hemp;
+    background-color: $color-white;
+  }
+
+  &__item {
+    font-family: $ff-secondary;
+    font-weight: 400;
+    color: $color-black-pearl-70;
+    font-size: 12px;
+    line-height: 14px;
+
+    @include from-md {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+/* Levels */
+
+.dd-level-2 .dd__header {
+  font-family: $ff-secondary;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: $color-white;
+  color: $color-black-pearl;
+  border: 1px solid $color-hemp;
+  border-radius: unset;
+  margin-top: -1px;
+  padding: 12px 10px;
+  font-weight: 600;
+  z-index: 1002;
+
+  @include from-md {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.dd-level-2 .dd__arrow {
+  color: $color-hemp;
+}
+
+.dd-level-3 .dd__header {
+  color: $color-black-pearl-90;
+  padding: 12px 10px 12px 20px;
+  font-weight: 500;
+}
+
+.dd-level-4 .dd__header {
+  font-size: 14px;
+  opacity: 0.75;
+  font-weight: 400;
+}

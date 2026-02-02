@@ -1,0 +1,378 @@
+{
+  "skillsTitle": "Habilidades",
+
+  "techStack": {
+    "title": "Stack Tecnológico",
+    "programmingLanguages": {
+      "title": "Lenguajes de Programación",
+      "ts": {
+        "title": "TypeScript",
+        "points": [
+          "Modo estricto, genéricos, tipos utilitarios",
+          "Interfaces, tipos, uniones discriminadas",
+          "Modularidad y abstracciones reutilizables",
+          "Manejo seguro de errores en API",
+          "Integración con React y Zustand",
+          "Tipado fuerte para formularios, esquemas y lógica asíncrona"
+        ]
+      },
+      "js": {
+        "title": "JavaScript (ES6+)",
+        "points": [
+          "Módulos, funciones flecha, destructuración",
+          "Trabajo con colecciones de datos (map, filter, reduce)",
+          "Async/await, Promesas, event loop",
+          "Control del DOM y formularios"
+        ]
+      }
+    },
+
+    "frontendFrameworks": {
+      "title": "Stack de frontend",
+      "react": {
+        "title": "React (18/19)",
+        "points": [
+          "Componentes funcionales y hooks",
+          "Composición de componentes y arquitectura modular",
+          "Optimización de rendimiento (memo, lazy, Suspense)",
+          "Enrutado con React Router",
+          "Componentes UI reutilizables",
+          "Separación de lógica y presentación (patrón presentational/container)",
+          "Error boundaries"
+        ]
+      },
+      "stateManagement": {
+        "title": "Gestión de Estado",
+        "points": [
+          "Zustand (selectors, slices, estructura por dominios)",
+          "Persistencia local y de sesión",
+          "Flujo JWT + refresh",
+          "Separación de lógica de negocio"
+        ]
+      }
+    },
+
+    "architecturePatterns": {
+      "title": "Arquitectura y Patrones",
+      "fsd": {
+        "title": "Feature-Sliced Design (FSD)",
+        "points": [
+          "Arquitectura en capas (entidades, features, shared)",
+          "Aislamiento de módulos",
+          "Estructura de proyecto escalable"
+        ]
+      },
+      "apiDataFlow": {
+        "title": "API y Flujo de Datos",
+        "points": [
+          "Integración con REST API",
+          "Instancia de Axios con interceptores",
+          "Manejo de tokens (access + refresh)"
+        ]
+      },
+      "performanceRendering": {
+        "title": "Rendimiento y Renderizado",
+        "points": [
+          "Páginas cargadas de forma perezosa (lazy-loaded)",
+          "Optimización selectiva con React.memo",
+          "Transiciones suaves de página usando Framer Motion",
+          "Renderizado del lado cliente (CSR) con rutas protegidas"
+        ]
+      },
+      "internationalization": {
+        "title": "Internacionalización (i18n)",
+        "points": [
+          "react-i18next con estructura basada en namespaces",
+          "Traducciones por feature alineadas con FSD",
+          "Carga diferida de bundles de idioma (lazy loading)",
+          "Claves de traducción con tipado seguro",
+          "Cambio de idioma en tiempo de ejecución sin recarga completa",
+          "Arquitectura multilingüe escalable"
+        ]
+      }
+    },
+
+    "bestPractices": {
+      "title": "Buenas Prácticas de Código",
+      "points": [
+        "Nombres claros y significativos para variables, funciones y archivos",
+        "Estructura modular y separación de responsabilidades",
+        "Mantener la lógica lo más simple posible según los requerimientos actuales",
+        "Escribir tests para la funcionalidad principal",
+        "Formato de código consistente y comentarios legibles",
+        "Documentar soluciones y escenarios edge-case",
+        "Usar soluciones nativas de JS/CSS en lugar de bibliotecas innecesarias cuando sea posible"
+      ]
+    },
+
+    "stylesUI": {
+      "title": "Estilos y UI",
+      "htmlA11y": {
+        "title": "HTML y Accesibilidad",
+        "points": [
+          "Markup semántico",
+          "Buenas prácticas de accesibilidad (a11y)",
+          "Estructura amigable para SEO",
+          "Renderizado optimizado (Lighthouse, Core Web Vitals)"
+        ]
+      },
+      "cssPreproc": {
+        "title": "CSS y Preprocesadores",
+        "points": [
+          "Módulos SCSS",
+          "Metodología BEM",
+          "Layouts responsivos y adaptativos"
+        ]
+      },
+      "animations": {
+        "title": "Animaciones",
+        "points": [
+          "Framer Motion",
+          "GSAP",
+          "Keyframes personalizados",
+          "Microinteracciones",
+          "Animaciones multi-paso y encadenadas"
+        ]
+      },
+      "visualization": {
+        "title": "Visualización",
+        "points": [
+          "Recharts (gráficas de líneas, barras, tooltips personalizados)",
+          "Canales de transformación de datos"
+        ]
+      }
+    },
+
+    "backend": {
+      "title": "Backend (mock / personalizado)",
+      "mockBackend": {
+        "title": "Mock backend personalizado con json-server",
+        "points": [
+          "json-server y json-server-auth con lógica de servidor personalizada",
+          "Autenticación JWT: tokens de acceso y refresh, endpoint de renovación",
+          "Middleware para proteger endpoints (authGuard)",
+          "Hash de contraseñas con bcrypt",
+          "Soft delete y filtrado de datos en el servidor",
+          "Estructura de datos normalizada",
+          "Integración con el frontend a través de REST API"
+        ]
+      }
+    }
+  },
+
+  "tools": {
+    "title": "Herramientas & flujo",
+    "devToolsEnv": {
+      "title": "Herramientas de desarrollo y entorno",
+      "vite": {
+        "title": "Vite",
+        "points": [
+          "Compilaciones rápidas",
+          "Recarga en caliente",
+          "Bundles de producción optimizados"
+        ]
+      },
+      "nodeNpm": {
+        "title": "Node.js y npm",
+        "points": ["Gestión de paquetes", "Scripts", "Servidores locales"]
+      },
+      "gitGithub": {
+        "title": "Git y GitHub",
+        "points": [
+          "Ramas (branching)",
+          "Fusiones (merging)",
+          "Rebase",
+          "Pull requests"
+        ]
+      },
+      "eslintPrettier": {
+        "title": "ESLint y Prettier",
+        "points": ["Linting", "Formateo", "Consistencia del código"]
+      },
+      "browserDevtools": {
+        "title": "DevTools del navegador",
+        "points": [
+          "Depuración",
+          "Monitoreo de red",
+          "Auditorías de rendimiento"
+        ]
+      }
+    },
+
+    "testingQA": {
+      "title": "Pruebas y QA",
+      "jest": {
+        "title": "Jest",
+        "points": [
+          "Pruebas unitarias",
+          "Pruebas de integración",
+          "Snapshot testing"
+        ]
+      },
+      "rtl": {
+        "title": "React Testing Library (RTL)",
+        "points": ["Pruebas de componentes", "Verificación del estado de UI"]
+      },
+      "mockApi": {
+        "title": "Mocking y pruebas de API",
+        "points": [
+          "Simulación de respuestas del backend",
+          "Cobertura de casos límite"
+        ]
+      },
+      "playwright": {
+        "title": "Playwright",
+        "points": [
+          "Pruebas end-to-end (E2E)",
+          "Verificación en múltiples navegadores",
+          "Verificación del comportamiento con scroll y cambios de viewport",
+          "Pruebas de flujos interactivos de componentes"
+        ]
+      }
+    },
+
+    "ciCD": {
+      "title": "CI/CD y despliegue",
+      "githubActions": {
+        "title": "GitHub Actions",
+        "points": ["Linting automatizado", "Pruebas", "Compilaciones"]
+      },
+      "vercel": {
+        "title": "Vercel",
+        "points": [
+          "Despliegues de previsualización",
+          "Alojamiento en producción",
+          "Optimización de compilación"
+        ]
+      }
+    },
+
+    "designPrototyping": {
+      "title": "Diseño y prototipado",
+      "figma": {
+        "title": "Figma",
+        "points": ["Trabajo con layouts", "Implementación pixel-perfect"]
+      }
+    },
+
+    "buildOptimization": {
+      "title": "Compilación y optimización",
+      "webpackVite": {
+        "title": "Webpack / Vite",
+        "points": [
+          "Tree shaking",
+          "División de código (code splitting)",
+          "Optimización de imágenes (WebP)",
+          "Ajuste de rendimiento de compilación",
+          "Configuración del entorno (variables de entorno, configuraciones multi-entorno)"
+        ]
+      }
+    }
+  },
+
+  "softSkills": {
+    "title": "Habilidades Blandas",
+    "systemThinking": {
+      "title": "Pensamiento Sistémico",
+      "points": [
+        "Descomponer problemas complejos de frontend en partes manejables y diseñar soluciones claras.",
+        "Aplicar pensamiento estructurado para arquitectura de código, planificación de funciones y resolución de errores.",
+        "Optimizar rendimiento, identificar cuellos de botella y prever casos límite en las aplicaciones."
+      ]
+    },
+
+    "ownershipResponsibility": {
+      "title": "Responsabilidad",
+      "points": [
+        "Asumir la propiedad completa de las funcionalidades desde la planificación hasta producción.",
+        "Garantizar la calidad, mantenibilidad y escalabilidad del código en los módulos en los que trabajas.",
+        "Supervisar el rendimiento de las funcionalidades e implementar mejoras proactivamente."
+      ]
+    },
+
+    "clearCommunication": {
+      "title": "Comunicación Clara",
+      "points": [
+        "Comunicar conceptos técnicos claramente a miembros del equipo y stakeholders no técnicos.",
+        "Escribir mensajes de commit significativos, documentación y comentarios de código.",
+        "Reducir ambigüedades en los requisitos haciendo preguntas precisas y dando sugerencias accionables."
+      ]
+    },
+
+    "collaborationTeamwork": {
+      "title": "Colaboración",
+      "points": [
+        "Coordinarse de manera efectiva con miembros del equipo, diseñadores y líderes de proyecto.",
+        "Participar en discusiones de proyectos y brindar retroalimentación constructiva.",
+        "Adaptarse a los flujos de trabajo y contribuir de manera eficiente a proyectos compartidos."
+      ]
+    },
+
+    "adaptabilityLearning": {
+      "title": "Adaptabilidad & Aprendizaje",
+      "points": [
+        "Aprender rápidamente nuevas tecnologías, librerías y patrones arquitectónicos.",
+        "Explorar temas desconocidos, experimentar y encontrar soluciones óptimas.",
+        "Adaptarse con facilidad a cambios en requerimientos y prioridades del proyecto."
+      ]
+    }
+  },
+
+  "crossFunctionalSkills": {
+    "title": "Habilidades Transversales",
+    "productThinking": {
+      "title": "Pensamiento de Producto",
+      "points": [
+        "Gestionar funciones de extremo a extremo: desde requisitos y restricciones hasta la entrega final.",
+        "Aclarar objetivos, casos de uso, riesgos y escenarios límite.",
+        "Construir interfaces que resuelvan problemas reales, no solo que se vean bien."
+      ]
+    },
+
+    "uxMindset": {
+      "title": "Mentalidad UX",
+      "points": [
+        "Fuerte sentido de jerarquía visual, espaciado, ritmo y tipografía.",
+        "Traducir diseños en código UI limpio y estructurado.",
+        "Trabajar con confianza con sistemas de diseño, patrones reutilizables y estilos consistentes.",
+        "Diseño de interfaces resilientes a contenido multilingüe (layouts conscientes de i18n).",
+        "Estrategia UX mobile-first y de maquetación responsive"
+      ]
+    },
+
+    "componentThinking": {
+      "title": "Pensamiento de Componentes",
+      "points": [
+        "Ver la UI como un sistema de componentes interconectados.",
+        "Construir arquitectura clara y escalable para layouts, lógica y estructuras de componentes.",
+        "Aplicar principios de modularidad y reutilización."
+      ]
+    },
+
+    "documentationWriting": {
+      "title": "Redacción de Documentación",
+      "points": [
+        "Crear documentación precisa, especificaciones y flujos de usuario.",
+        "Registrar decisiones, casos límite y detalles de implementación.",
+        "Mantener claridad para el equipo mediante escritura estructurada."
+      ]
+    },
+
+    "iterationOptimization": {
+      "title": "Iteración y Optimización",
+      "points": [
+        "Mejorar procesos, flujos de trabajo y rendimiento de forma iterativa.",
+        "Abordar soluciones con una mentalidad de eficiencia primero."
+      ]
+    },
+
+    "visualTechnicalPrecision": {
+      "title": "Precisión Visual y Técnica",
+      "points": [
+        "Prestar atención a los detalles en layouts, animaciones e interacciones.",
+        "Garantizar precisión de píxeles y consistencia de la interfaz.",
+        "Entregar UI que funcione bien y se sienta refinada."
+      ]
+    }
+  }
+}

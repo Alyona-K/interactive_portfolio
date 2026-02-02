@@ -1,0 +1,32 @@
+$color-white:                         #ffffff;
+$color-white-70:                      rgba(255, 255, 255, 0.7);
+$color-white-20:                      rgba(255, 255, 255, 0.2);
+$color-black:                         #000000;
+$color-black-pearl:                   #010C13;
+$color-black-pearl-90:                rgba(1, 12, 19, 0.9);
+$color-black-pearl-70:                rgba(1, 12, 19, 0.7);
+$color-black-pearl-50:                rgba(1, 12, 19, 0.5);
+$color-black-pearl-30:                rgba(1, 12, 19, 0.3);
+$color-dark-gray:                     #B7A9A9;
+$color-chardon:                       #F6ECE3;
+$color-chardon-25:                    rgba(246, 236, 227, 0.25);
+$color-hemp:                          #91766E;
+$color-toledo:                        #353233;
+$color-haiti-90:                      rgba(33, 34, 40, 0.9);
+$color-error:                         #ffc21b;
+
+
+// Typography
+$ff-main: "Syne", "Manrope", "Arial", sans-serif;
+$ff-main-ru: "a-avanteint-book", "Arial", sans-serif;
+$ff-secondary: "GolosText", "Inter", "Arial", sans-serif;
+
+// Breakpoints
+$bp-sm: 480px;   
+$bp-md: 768px;   
+$bp-lg: 1024px;  
+$bp-xl: 1280px;  
+$bp-xxl: 1440px;
+
+// Animation
+$transition-300: ease-in 0.3s;

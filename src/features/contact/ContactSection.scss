@@ -1,0 +1,40 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.contact-section {
+  margin: 0 auto;
+  padding: 120px 0;
+  background: transparent;
+  position: relative;
+
+  @include from-md {
+    margin: 0 auto 150px;
+    padding: 130px 0;
+  }
+
+    @include from-xl {
+    margin: 0 auto 180px;
+    padding: 150px 0;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-hemp;
+    height: 670px;
+    width: 100%;
+    border-radius: 0;
+    z-index: -1;
+    will-change: width, border-radius;
+
+    @include from-md {
+      height: 470px;
+    }
+
+    @include from-xl {
+      height: 528px;
+    }
+  }
+}

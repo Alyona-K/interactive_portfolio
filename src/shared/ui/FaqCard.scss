@@ -1,0 +1,97 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.faq-card {
+  width: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: $color-white;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  box-shadow: 3px 3px 8px $color-black-pearl-50;
+
+  @include from-md {
+    width: 450px;
+    border-radius: 20px;
+  }
+
+  @include from-xl {
+    width: 525px;
+    border-radius: 18px;
+  }
+
+  &--odd {
+    background: $color-chardon;
+  }
+
+  &__question {
+    background: $color-hemp;
+    padding: 18px 10px;
+    color: $color-black-pearl;
+    min-height: 102px;
+
+    @include from-md {
+      padding: 28px 18px;
+      height: 130px;
+    }
+
+    @include from-xl {
+      padding: 30px 20px;
+      height: 150px;
+    }
+  }
+
+  &__question--odd {
+    background: $color-toledo;
+    color: $color-white;
+  }
+
+  &__question-text {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+
+    @include from-md {
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    @include from-xl {
+      font-size: 30px;
+      line-height: 32px;
+    }
+  }
+
+  &__answer {
+    padding: 12px 10px;
+    color: $color-black-pearl;
+
+    @include from-md {
+      padding: 20px;
+    }
+
+    @include from-xl {
+      padding: 20px;
+    }
+  }
+
+  &__answer-text {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    margin: 0;
+
+    @include from-md {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include from-xl {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}

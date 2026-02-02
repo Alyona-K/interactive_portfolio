@@ -1,0 +1,332 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.project-modal {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: $color-white;
+  border-radius: 0;
+  box-shadow: 0 0 35px $color-white-20;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  @include from-md {
+    width: 85%;
+    height: 90vh;
+    border-radius: 26px;
+    gap: 13px;
+  }
+
+    @include from-lg {
+    width: 70%;
+  }
+
+  @include from-xl {
+    width: 800px;
+    border-radius: 32px;
+    gap: 15px;
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1002;
+    width: 100vw;
+    height: 100vh;
+    background: $color-black-pearl-70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__close {
+    background-color: $color-chardon;
+    color: $color-black-pearl;
+    border: none;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    box-shadow: 0 3px 3px $color-black-pearl-30;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition:
+      background-color $transition-300,
+      color $transition-300;
+
+    @include from-md {
+      width: 30px;
+      height: 30px;
+      top: 19px;
+      right: 19px;
+    }
+  }
+
+  &__close:hover,
+  &__close:focus-visible {
+    background-color: $color-black-pearl;
+    color: $color-chardon;
+    outline: none;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 200px;
+    padding: 0;
+    background: $color-black-pearl;
+    margin: 0 auto;
+    overflow: hidden;
+
+    @include from-md {
+      height: 250px;
+    }
+
+    @include from-xl {
+      height: 340px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+  }
+
+  &__img-title {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    color: $color-chardon;
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 700;
+    text-align: center;
+    pointer-events: none;
+    max-width: 720px;
+
+    @include from-md {
+      top: 125px;
+      font-size: 45px;
+      line-height: 50px;
+    }
+
+    @include from-xl {
+      top: 165px;
+      font-size: 50px;
+      line-height: 56px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    padding: 10px 17px 10px 20px;
+    margin: 0 auto 20px;
+    scroll-behavior: smooth;
+    color: $color-black-pearl;
+
+    @include from-md {
+      padding: 20px 30px;
+    }
+
+    @include from-xl {
+      padding: 30px 40px;
+    }
+  }
+
+  &__title {
+    margin: 0 auto 20px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+
+    @include from-md {
+      margin: 0 auto 30px;
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include from-xl {
+      margin: 0 auto 45px;
+      font-size: 30px;
+      line-height: 32px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 auto 10px;
+    padding: 0;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+
+    @include from-md {
+      margin: 0 auto 15px;
+      font-size: 24px;
+      line-height: 26px;
+    }
+
+    @include from-xl {
+      margin: 0 auto 25px;
+      font-size: 26px;
+      line-height: 28px;
+    }
+  }
+
+  &__description {
+    margin: 0 auto 30px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+
+    @include from-md {
+      margin: 0 auto 40px;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include from-xl {
+      margin: 0 auto 50px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__description--center {
+    text-align: center;
+  }
+
+  &__description--list,
+  &__challenges-list {
+    margin-left: 15px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    @include from-md {
+      margin-left: 20px;
+      gap: 5px;
+    }
+
+    @include from-xl {
+      margin-left: 20px;
+      gap: 5px;
+    }
+  }
+
+  &__challenges-item {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+  }
+
+  &__description-item {
+    position: relative;
+  }
+
+  &__description-item::before,
+  &__challenges-item::before {
+    content: "";
+    position: absolute;
+    background-color: $color-black-pearl;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    top: 7px;
+    left: -15px;
+
+    @include from-md {
+      width: 6px;
+      height: 6px;
+      top: 8px;
+      left: -18px;
+    }
+
+    @include from-xl {
+      width: 7px;
+      height: 7px;
+      top: 10px;
+      left: -18px;
+    }
+  }
+
+  &__challenges-text {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+  }
+
+  &__link {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $color-black-pearl;
+    margin: 0;
+    padding: 0;
+    transition: color $transition-300;
+
+    @include from-md {
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @include from-xl {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__link:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 16px;
+    background-color: $color-black-pearl;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__link:hover,
+  &__link:focus-visible {
+    color: $color-hemp;
+    outline: none;
+  }
+}

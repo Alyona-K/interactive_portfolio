@@ -1,0 +1,227 @@
+@use "@/shared/styles/variables" as *;
+@use "@/shared/styles/mixins" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  background: $color-black-pearl-30;
+  backdrop-filter: blur(13px) saturate(140%);
+  padding: 15px 0;
+  opacity: 0;
+
+  @include from-md {
+    padding: 20px 0;
+  }
+
+  @include from-xl {
+    padding: 30px 0;
+  }
+
+  &__burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include from-md {
+      display: none;
+    }
+  }
+
+  &__burger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+
+    transition: transform $transition-300;
+
+    @include from-md {
+      display: none;
+    }
+  }
+
+  &__burger-btn:hover {
+    transform: scale(1.2);
+  }
+
+  &__burger-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__burger-icon::before,
+  &__burger-icon::after,
+  &__burger-icon span,
+  &__burger-icon i {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: $color-white;
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+    opacity: 1;
+
+    transition:
+      transform 0.5s ease,
+      opacity 0.3s ease,
+      width 0.3s ease,
+      height 0.3s ease,
+      border-radius 0.3s ease;
+  }
+
+  &__burger-icon::before {
+    transform: translate(-50%, -50%) translate(-6px, -6px);
+  }
+
+  &__burger-icon::after {
+    transform: translate(-50%, -50%) translate(6px, -6px);
+  }
+
+  &__burger-icon span {
+    transform: translate(-50%, -50%) translate(-6px, 6px);
+  }
+
+  &__burger-icon i {
+    transform: translate(-50%, -50%) translate(6px, 6px);
+  }
+
+  &__burger-btn.is-open &__burger-icon::before,
+  &__burger-btn.is-open &__burger-icon::after,
+  &__burger-btn.is-open &__burger-icon span,
+  &__burger-btn.is-open &__burger-icon i {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+
+  &__burger-btn.is-open &__burger-icon::before,
+  &__burger-btn.is-open &__burger-icon::after {
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    opacity: 1;
+  }
+
+  &__burger-btn.is-open &__burger-icon::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &__burger-btn.is-open &__burger-icon::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &__content {
+    display: none;
+
+    @include from-md {
+      display: grid;
+      grid-template-columns: 1fr 110px;
+      align-items: center;
+      justify-content: center;
+      margin-left: 100px;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    @include from-md {
+      gap: 20px;
+    }
+
+    @include from-xl {
+      gap: 30px;
+    }
+  }
+
+  &__link,
+  &__btn {
+    background: none;
+    border: none;
+    color: $color-white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color $transition-300;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-dark-gray;
+      outline: none;
+    }
+
+    &:active {
+      color: $color-dark-gray;
+    }
+
+    @include from-md {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include from-xl {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include from-md {
+      gap: 13px;
+    }
+
+    @include from-xl {
+      gap: 18px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    &--active {
+      color: $color-white-70;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+
+  &__btn:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: $color-white;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include from-md {
+      height: 18px;
+      left: -6px;
+    }
+
+    @include from-xl {
+      height: 20px;
+      left: -9px;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@use "@/shared/styles/variables" as *;
+
+.burger {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 80%;
+  background-color: $color-haiti-90;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 120px 0;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s ease;
+
+  &--open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__links-list {
+    list-style: none;
+    margin: 0 auto 50px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  &__link,
+  &__lang-btn {
+    background: transparent;
+    border: none;
+    color: $color-white;
+    font-family: $ff-secondary;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color $transition-300;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-dark-gray;
+      outline: none;
+    }
+
+    &:active {
+      color: $color-dark-gray;
+    }
+  }
+
+  &__lang {
+    display: flex;
+    gap: 19px;
+  }
+
+  &__lang-btn {
+    position: relative;
+    &--active {
+      color: $color-white-70;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+  }
+
+  &__lang-btn:not(:first-child)::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 18px;
+    background-color: $color-white;
+    left: -11px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__logo {
+    position: absolute;
+    bottom: 35px;
+    right: 97px;
+    opacity: 0.5;
+
+    .logo__part-1,
+    .logo__part-2,
+    .logo__part-3 {
+      mask-size: 100% 100%;
+      -webkit-mask-size: 100% 100%;
+    }
+  }
+}
