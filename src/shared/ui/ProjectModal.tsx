@@ -20,22 +20,20 @@ const backdropVariants = {
 
 // --- FRAMER-MOTION VARIANTS FOR MODAL ---
 const modalVariants: Variants = {
-  hidden: { opacity: 0, y: -20, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.25,
-      ease: cubicBezier(0.25, 0.1, 0.25, 1),
-    },
+  hidden: { opacity: 0, y: -20 },
+visible: {
+  opacity: 1,
+  y: 0,
+  transition: {
+    duration: 0.25,
+    ease: cubicBezier(0.25, 0.1, 0.25, 1),
   },
-  exit: {
-    opacity: 0,
-    y: 10,
-    scale: 0.97,
-    transition: { duration: 0.2 },
-  },
+},
+exit: {
+  opacity: 0,
+  y: 10,
+  transition: { duration: 0.2 },
+},
 };
 
 // --- UTILITY: GET MODIFIER CLASS FOR LINK TYPE ---
