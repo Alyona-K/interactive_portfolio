@@ -21,7 +21,7 @@ describe("BurgerMenu", () => {
   it("does not render open class when closed", () => {
     // Ensure burger menu does not have open state class when closed
     const { container } = render(
-      <BurgerMenu isOpen={false} onClose={jest.fn()} />
+      <BurgerMenu isOpen={false} onClose={jest.fn()} />,
     );
     expect(container.firstChild).not.toHaveClass("burger--open");
   });
@@ -43,4 +43,3 @@ describe("BurgerMenu", () => {
     expect(screen.getByRole("button", { name: "RU" })).toBeInTheDocument();
   });
 });
-

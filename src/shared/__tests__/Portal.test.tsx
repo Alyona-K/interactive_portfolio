@@ -17,14 +17,12 @@ describe("Portal", () => {
     render(
       <Portal>
         <div data-testid="portal-content">Hello</div>
-      </Portal>
+      </Portal>,
     );
 
     // Verify children are rendered inside the portal root
     expect(screen.getByTestId("portal-content")).toBeInTheDocument();
-    expect(portalRoot).toContainElement(
-      screen.getByTestId("portal-content")
-    );
+    expect(portalRoot).toContainElement(screen.getByTestId("portal-content"));
   });
 
   // --- FALLBACK IF PORTAL ROOT MISSING ---
@@ -33,48 +31,9 @@ describe("Portal", () => {
     const { container } = render(
       <Portal>
         <div>Hello</div>
-      </Portal>
+      </Portal>,
     );
 
     expect(container).toBeEmptyDOMElement();
   });
 });
-
-
-//------
-
-// import { render, screen } from "@testing-library/react";
-// import { Portal } from "@shared/ui/Portal";
-
-// describe("Portal", () => {
-//   afterEach(() => {
-//     document.body.innerHTML = "";
-//   });
-
-//   it("renders children into portal-root", () => {
-//     const portalRoot = document.createElement("div");
-//     portalRoot.setAttribute("id", "portal-root");
-//     document.body.appendChild(portalRoot);
-
-//     render(
-//       <Portal>
-//         <div data-testid="portal-content">Hello</div>
-//       </Portal>
-//     );
-
-//     expect(screen.getByTestId("portal-content")).toBeInTheDocument();
-//     expect(portalRoot).toContainElement(
-//       screen.getByTestId("portal-content")
-//     );
-//   });
-
-//   it("renders nothing if portal-root is missing", () => {
-//     const { container } = render(
-//       <Portal>
-//         <div>Hello</div>
-//       </Portal>
-//     );
-
-//     expect(container).toBeEmptyDOMElement();
-//   });
-// });

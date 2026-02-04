@@ -33,4 +33,3 @@ describe("Footer", () => {
     expect(screen.getByRole("link", { name: /telegram/i })).toBeInTheDocument();
   });
 });
-

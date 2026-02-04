@@ -2,7 +2,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import Textarea from "@shared/ui/Textarea";
 
 describe("Textarea", () => {
-
   // --- RENDER WITHOUT LABEL ---
   test("renders without label", () => {
     render(<Textarea id="test-textarea" />);
@@ -32,7 +31,7 @@ describe("Textarea", () => {
         wrapperClassName="wrapper-custom"
         fieldClassName="field-custom"
         labelClassName="label-custom"
-      />
+      />,
     );
 
     const wrapper = screen.getByRole("textbox").parentElement;
@@ -56,7 +55,7 @@ describe("Textarea", () => {
         value="initial"
         placeholder="Type here"
         onChange={handleChange}
-      />
+      />,
     );
 
     const textarea = screen.getByRole("textbox") as HTMLTextAreaElement;
@@ -70,64 +69,3 @@ describe("Textarea", () => {
     expect(handleChange).toHaveBeenCalledTimes(1);
   });
 });
-
-//--------------
-
-// import { render, screen, fireEvent } from "@testing-library/react";
-// import Textarea from "@shared/ui/Textarea";
-
-// describe("Textarea", () => {
-//   test("renders without label", () => {
-//     render(<Textarea id="test-textarea" />);
-//     const textarea = screen.getByRole("textbox");
-//     expect(textarea).toBeInTheDocument();
-//     expect(screen.queryByLabelText(/./)).toBeNull();
-//   });
-
-//   test("renders with label", () => {
-//     render(<Textarea id="test-textarea" label="Description" />);
-//     const label = screen.getByText("Description");
-//     const textarea = screen.getByLabelText("Description");
-//     expect(label).toBeInTheDocument();
-//     expect(textarea).toBeInTheDocument();
-//   });
-
-//   test("applies custom class names", () => {
-//     render(
-//       <Textarea
-//         id="test-textarea"
-//         label="Notes"
-//         wrapperClassName="wrapper-custom"
-//         fieldClassName="field-custom"
-//         labelClassName="label-custom"
-//       />
-//     );
-
-//     const wrapper = screen.getByRole("textbox").parentElement;
-//     const textarea = screen.getByRole("textbox");
-//     const label = screen.getByText("Notes");
-
-//     expect(wrapper).toHaveClass("custom-textarea wrapper-custom");
-//     expect(textarea).toHaveClass("custom-textarea__field field-custom");
-//     expect(label).toHaveClass("custom-textarea__label label-custom");
-//   });
-
-//   test("supports value, placeholder and onChange", () => {
-//     const handleChange = jest.fn();
-//     render(
-//       <Textarea
-//         id="test-textarea"
-//         value="initial"
-//         placeholder="Type here"
-//         onChange={handleChange}
-//       />
-//     );
-
-//     const textarea = screen.getByRole("textbox") as HTMLTextAreaElement;
-//     expect(textarea.value).toBe("initial");
-//     expect(textarea.placeholder).toBe("Type here");
-
-//     fireEvent.change(textarea, { target: { value: "updated" } });
-//     expect(handleChange).toHaveBeenCalledTimes(1);
-//   });
-// });

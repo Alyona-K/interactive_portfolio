@@ -2,7 +2,6 @@ import { renderHook, act } from "@testing-library/react";
 import { useLoader } from "@/shared/hooks/useLoader";
 
 describe("useLoader", () => {
-
   // --- USE FAKE TIMERS FOR CONTROLLING ASYNC TIMING ---
   beforeEach(() => {
     jest.useFakeTimers();
@@ -30,4 +29,3 @@ describe("useLoader", () => {
     expect(result.current).toBe(true);
   });
 });
-

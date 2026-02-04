@@ -17,12 +17,32 @@ jest.mock("@/shared/ui/LazySection", () => ({
 
 // --- MOCK STATIC ASSETS ---
 // Prevent actual image imports, provide mock strings for testing
-jest.mock("@/assets/images/about/profile-img.webp", () => "profile-mock", { virtual: true });
-jest.mock("@/assets/images/about/profile-img@2x.webp", () => "profile-mock", { virtual: true });
-jest.mock("@/assets/images/about/profile-img--tablet.webp", () => "profile-mock", { virtual: true });
-jest.mock("@/assets/images/about/profile-img--tablet@2x.webp", () => "profile-mock", { virtual: true });
-jest.mock("@/assets/images/about/profile-img--mobile.webp", () => "profile-mock", { virtual: true });
-jest.mock("@/assets/images/about/profile-img--mobile@2x.webp", () => "profile-mock", { virtual: true });
+jest.mock("@/assets/images/about/profile-img.webp", () => "profile-mock", {
+  virtual: true,
+});
+jest.mock("@/assets/images/about/profile-img@2x.webp", () => "profile-mock", {
+  virtual: true,
+});
+jest.mock(
+  "@/assets/images/about/profile-img--tablet.webp",
+  () => "profile-mock",
+  { virtual: true },
+);
+jest.mock(
+  "@/assets/images/about/profile-img--tablet@2x.webp",
+  () => "profile-mock",
+  { virtual: true },
+);
+jest.mock(
+  "@/assets/images/about/profile-img--mobile.webp",
+  () => "profile-mock",
+  { virtual: true },
+);
+jest.mock(
+  "@/assets/images/about/profile-img--mobile@2x.webp",
+  () => "profile-mock",
+  { virtual: true },
+);
 
 // Mock ScrollTrigger to prevent actual scroll animations
 jest.mock("gsap/ScrollTrigger", () => ({
@@ -88,124 +108,10 @@ describe("ProjectPage", () => {
     const mockComplete = jest.fn();
 
     render(
-      <ProjectPage
-        startHeroIntro={true}
-        onHeroEnterComplete={mockComplete}
-      />
+      <ProjectPage startHeroIntro={true} onHeroEnterComplete={mockComplete} />,
     );
 
     // Contract: callback prop exists and can be called by Hero
     expect(mockComplete).toBeDefined();
   });
 });
-
-//----------
-
-// // --- MOCKS ---
-
-// // Заглушка для Hero
-// jest.mock("@/features/hero/Hero", () => ({
-//   __esModule: true,
-//   default: ({ startIntro }: any) => (
-//     <div>{startIntro ? "started" : "stopped"}</div>
-//   ),
-// }));
-
-// // Заглушка для ленивых компонентов
-// jest.mock("@/shared/ui/LazySection", () => ({
-//   __esModule: true,
-//   default: ({ testId }: any) => (
-//     <section data-testid={testId}>Lazy section</section>
-//   ),
-// }));
-
-// // --- MOCK STATIC ASSETS ---
-// jest.mock("@/assets/images/about/profile-img.webp", () => "profile-mock", {
-//   virtual: true,
-// });
-
-// jest.mock("@/assets/images/about/profile-img@2x.webp", () => "profile-mock", {
-//   virtual: true,
-// });
-// jest.mock("@/assets/images/about/profile-img--tablet.webp", () => "profile-mock", {
-//   virtual: true,
-// });
-// jest.mock("@/assets/images/about/profile-img--tablet@2x.webp", () => "profile-mock", {
-//   virtual: true,
-// });
-// jest.mock("@/assets/images/about/profile-img--mobile.webp", () => "profile-mock", {
-//   virtual: true,
-// });
-// jest.mock("@/assets/images/about/profile-img--mobile@2x.webp", () => "profile-mock", {
-//   virtual: true,
-// });
-
-// jest.mock("gsap/ScrollTrigger", () => ({
-//   ScrollTrigger: {},
-// }));
-
-// jest.mock("@/shared/ui/Modal", () => ({
-//   __esModule: true,
-//   default: ({
-//     isOpen,
-//     title,
-//     onClose,
-//     children,
-//   }: {
-//     isOpen: boolean;
-//     title: string;
-//     onClose: () => void;
-//     children: React.ReactNode;
-//   }) =>
-//     isOpen ? (
-//       <div data-testid="modal">
-//         <h2>{title}</h2>
-//         <div>{children}</div>
-//         <button onClick={onClose}>close</button>
-//       </div>
-//     ) : null,
-// }));
-
-// jest.mock("@/features/contact/ContactForm", () => ({
-//   __esModule: true,
-//   default: () => <div data-testid="contact-form" />,
-// }));
-
-// import { render, screen } from "@testing-library/react";
-// import ProjectPage from "@/pages/project-page";
-
-// // ---------- TESTS ----------
-// describe("ProjectPage", () => {
-//   test("renders Hero with correct startIntro prop", () => {
-//     render(<ProjectPage startHeroIntro={true} />);
-
-//     const hero = screen.getByTestId("hero");
-//     expect(hero).toBeInTheDocument();
-//     expect(hero).toHaveTextContent("started");
-//   });
-
-//   test("renders LazySections when they become visible", () => {
-//     render(<ProjectPage startHeroIntro={false} />);
-    
-//     // Все lazy-секции должны появиться из-за mock IntersectionObserver
-//     expect(screen.getByTestId("about")).toBeInTheDocument();
-//     expect(screen.getByTestId("skills")).toBeInTheDocument();
-//     expect(screen.getByTestId("projects-gallery")).toBeInTheDocument();
-//     expect(screen.getByTestId("faq-slider")).toBeInTheDocument();
-//     expect(screen.getByTestId("contact-section")).toBeInTheDocument();
-//   });
-
-//   test("passes onAnimationComplete to Hero", () => {
-//     const mockComplete = jest.fn();
-
-//     render(
-//       <ProjectPage
-//         startHeroIntro={true}
-//         onHeroEnterComplete={mockComplete}
-//       />
-//     );
-
-//     // контракт: проп существует
-//     expect(mockComplete).toBeDefined();
-//   });
-// });

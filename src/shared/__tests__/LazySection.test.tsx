@@ -26,9 +26,12 @@ describe("LazySection", () => {
     // Intercept constructor to capture observer instance for triggering intersections
     (window as any).IntersectionObserver = function (
       callback: IntersectionObserverCallback,
-      options?: IntersectionObserverInit
+      options?: IntersectionObserverInit,
     ) {
-      observerInstance = new Original(callback, options) as IntersectionObserverMock;
+      observerInstance = new Original(
+        callback,
+        options,
+      ) as IntersectionObserverMock;
       return observerInstance;
     };
   });
@@ -61,60 +64,3 @@ describe("LazySection", () => {
     expect(observerInstance?.rootMargin).toBe("300px");
   });
 });
-
-//----------
-
-// import { lazy } from "react";
-// import { render, screen, act } from "@testing-library/react";
-// import LazySection from "@shared/ui/LazySection";
-// import { IntersectionObserverMock } from "@/setupTests";
-
-// // ---------- MOCKS ----------
-
-// const MockComponent = () => <div data-testid="lazy-content">Loaded</div>;
-
-// const LazyMock = lazy(async () => ({
-//   default: MockComponent,
-// }));
-
-// // ---------- TESTS ----------
-
-// describe("LazySection", () => {
-//   let observerInstance: IntersectionObserverMock | null = null;
-
-//   beforeEach(() => {
-//     observerInstance = null;
-
-//     const Original = window.IntersectionObserver;
-
-//     // перехватываем конструктор, чтобы поймать наш мок
-//     (window as any).IntersectionObserver = function (
-//       callback: IntersectionObserverCallback,
-//       options?: IntersectionObserverInit
-//     ) {
-//       observerInstance = new Original(callback, options) as IntersectionObserverMock;
-//       return observerInstance;
-//     };
-//   });
-
-//   test("does not render component before intersection", () => {
-//     render(<LazySection Component={LazyMock} testId="lazy-section" />);
-//     expect(screen.getByTestId("lazy-section")).toBeInTheDocument();
-//     expect(screen.queryByTestId("lazy-content")).toBeNull();
-//   });
-
-//   test("renders component after intersection", async () => {
-//     render(<LazySection Component={LazyMock} />);
-
-//     await act(async () => {
-//       observerInstance?.trigger(true); // TS теперь знает, что это IntersectionObserverMock
-//     });
-
-//     expect(screen.getByTestId("lazy-content")).toBeInTheDocument();
-//   });
-
-//   test("passes rootMargin to IntersectionObserver", () => {
-//     render(<LazySection Component={LazyMock} rootMargin="300px" />);
-//     expect(observerInstance?.rootMargin).toBe("300px"); // TS тоже понимает
-//   });
-// });
