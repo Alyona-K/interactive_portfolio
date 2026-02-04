@@ -20,7 +20,11 @@ export const ContactSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="contact-section scroll-section" id="contact" ref={sectionRef}>
+    <section
+      className="contact-section scroll-section"
+      id="contact"
+      ref={sectionRef}
+    >
       <h1 className="visually-hidden">Contact section</h1>
       <div className="container">
         <ContactForm />
@@ -31,4 +35,3 @@ export const ContactSection: React.FC = () => {
 };
 
 export default ContactSection;
-

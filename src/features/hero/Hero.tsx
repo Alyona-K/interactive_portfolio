@@ -67,4 +67,3 @@ const Hero: React.FC<HeroProps> = ({ startIntro, onAnimationComplete }) => {
 };
 
 export default Hero;
-

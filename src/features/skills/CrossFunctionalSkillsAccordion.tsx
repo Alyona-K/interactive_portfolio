@@ -22,21 +22,3 @@ export const CrossFunctionalSkillsAccordion: React.FC<Props> = ({
 };
 
 export default CrossFunctionalSkillsAccordion;
-
-// import React from "react";
-// import { AccordionDropdown } from "@/shared/ui/AccordionDropdown";
-// import { useAccordionBehavior } from "@/shared/hooks/useAccordionBehavior";
-// import { crossFunctionalSkills } from "@/entities/skills/model/crossFunctional.data";
-
-// export const CrossFunctionalSkillsAccordion: React.FC = () => {
-//   const { multiple } = useAccordionBehavior();
-//   return (
-//     <AccordionDropdown
-//       items={crossFunctionalSkills}
-//       multiple={multiple}
-//       level={1}
-//     />
-//   );
-// };
-
-// export default CrossFunctionalSkillsAccordion;

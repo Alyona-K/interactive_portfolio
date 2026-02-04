@@ -24,7 +24,7 @@ const LazySection: React.FC<LazySectionProps> = ({
           observer.disconnect(); // --- STOP OBSERVING AFTER FIRST INTERSECTION ---
         }
       },
-      { rootMargin } // --- OFFSET TO TRIGGER LOAD BEFORE ELEMENT IS IN VIEW ---
+      { rootMargin }, // --- OFFSET TO TRIGGER LOAD BEFORE ELEMENT IS IN VIEW ---
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -40,46 +40,3 @@ const LazySection: React.FC<LazySectionProps> = ({
 };
 
 export default LazySection;
-
-//----------
-
-// import React from "react";
-
-// interface LazySectionProps {
-//   Component: React.LazyExoticComponent<React.FC<any>>;
-//   rootMargin?: string;
-//   testId?: string;
-// }
-
-// const LazySection: React.FC<LazySectionProps> = ({
-//   Component,
-//   rootMargin = "200px",
-//   testId,
-// }) => {
-//   const [isVisible, setIsVisible] = React.useState(false);
-//   const ref = React.useRef<HTMLDivElement>(null);
-
-//   React.useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) {
-//           setIsVisible(true);
-//           observer.disconnect();
-//         }
-//       },
-//       { rootMargin },
-//     );
-
-//     if (ref.current) observer.observe(ref.current);
-
-//     return () => observer.disconnect();
-//   }, [rootMargin]);
-
-//   return (
-//     <div ref={ref} data-testid={testId}>
-//       {isVisible && <Component />}
-//     </div>
-//   );
-// };
-
-// export default LazySection;

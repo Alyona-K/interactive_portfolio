@@ -29,7 +29,7 @@
         "Scroll-driven project card animations with a 'View' tooltip that follows the cursor",
         "Modal windows that block background scrolling and display detailed project presentations",
         "Contact form with EmailJS for sending messages without a backend, featuring client-side validation, multilingual support, and a result modal",
-        "Fully responsive layout across all screen sizes",
+        "Fully responsive layout across all screen sizes (minor fixes for Safari/iOS: SVG icons, modals, header, hero section, footer tooltips)",
         "Resume download available in three languages",
         "Semantic and accessible markup with UX and ARIA considerations",
         "Custom visuals generated for each project",

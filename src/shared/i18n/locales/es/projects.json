@@ -28,7 +28,7 @@
         "Animación de tarjetas de proyectos controlada por scroll con tooltip 'Ver' que sigue al cursor",
         "Ventanas modales que bloquean el scroll de fondo y muestran la presentación detallada de cada proyecto",
         "Formulario de contacto con EmailJS para enviar mensajes sin backend, con validación del lado del cliente, soporte multilingüe y ventana modal de resultado",
-        "Layout completamente responsivo para todas las resoluciones",
+        "Diseño completamente responsivo para todos los tamaños de pantalla (pequeñas correcciones para Safari/iOS: iconos SVG, modales, encabezado, sección hero, tooltips en el footer)",
         "Posibilidad de descargar el CV en tres idiomas",
         "Markup semántico y accesible con consideraciones de UX y ARIA",
         "Visuales personalizados generados para cada proyecto",

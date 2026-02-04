@@ -17,4 +17,3 @@ export const LanguageSync = () => {
   // --- RENDERLESS COMPONENT: ONLY EFFECTS ---
   return null;
 };
-

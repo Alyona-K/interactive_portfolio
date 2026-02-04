@@ -24,7 +24,6 @@ export interface ImageSet {
 
 export interface ProjectData {
   id: string;
-  // modalImage: ImageSet;
   modalImage: string;
   titleKey: string;
   modalTitleKey: string;
