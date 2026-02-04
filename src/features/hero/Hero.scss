@@ -2,7 +2,8 @@
 @use "@/shared/styles/mixins" as *;
 
 .hero {
-  height: calc(100dvh + 20px);
+  // height: calc(100dvh + 20px);
+  height: calc(var(--vh, 1vh) * 100 + 20px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,12 +13,20 @@
   opacity: 0;
 
   @include from-md {
-    height: calc(100vh + 30px);
+    height: calc(var(--vh, 1vh) * 100 + 30px);
   }
 
   @include from-xl {
-    height: calc(100vh + 60px);
+    height: calc(var(--vh, 1vh) * 100 + 60px);
   }
+
+  // @include from-md {
+  //   height: calc(100vh + 30px);
+  // }
+
+  // @include from-xl {
+  //   height: calc(100vh + 60px);
+  // }
 
   &__content {
     display: flex;

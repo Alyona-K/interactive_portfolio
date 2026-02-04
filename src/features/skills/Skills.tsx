@@ -1,37 +1,3 @@
-// import React, { useEffect } from "react";
-// import { useTranslation } from "react-i18next";
-// import TechStackAccordion from "@/features/skills/TechStackAccordion";
-// import ToolsAccordion from "@/features/skills/ToolsAccordion";
-// import SoftSkillsAccordion from "@/features/skills/SoftSkillsAccordion";
-// import CrossFunctionalSkillsAccordion from "@/features/skills/CrossFunctionalSkillsAccordion";
-// import { animateSkills } from "./skillsAnimation";
-// import "./Skills.scss";
-
-// const Skills: React.FC = () => {
-//   const { t } = useTranslation("skills");
-
-//   useEffect(() => {
-//     animateSkills();
-//   }, []);
-
-//   return (
-//     <section className="skills" id="skills">
-//       <h1 className="visually-hidden">Skills section</h1>
-//       <h2 className="skills__title">{t("skillsTitle")}</h2>
-//       <div className="skills__accordions">
-//         <TechStackAccordion />
-//         <ToolsAccordion />
-//         <SoftSkillsAccordion />
-//         <CrossFunctionalSkillsAccordion />
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Skills;
-
-//---------------
-
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import TechStackAccordion from "@/features/skills/TechStackAccordion";
@@ -106,4 +72,3 @@ const Skills: React.FC = () => {
 };
 
 export default Skills;
-

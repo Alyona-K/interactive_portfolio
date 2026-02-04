@@ -89,7 +89,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     viewPos.current.y = lerp(viewPos.current.y, targetY, LERP);
 
     const viewEl = cardRef.current?.querySelector<HTMLDivElement>(
-      ".project-card__view-cursor"
+      ".project-card__view-cursor",
     );
     if (viewEl) {
       viewEl.style.left = `${viewPos.current.x}px`;
@@ -115,7 +115,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       rafRef.current = null;
 
       const viewEl = cardRef.current?.querySelector<HTMLDivElement>(
-        ".project-card__view-cursor"
+        ".project-card__view-cursor",
       );
       if (viewEl) {
         viewEl.style.left = `${cursor.current.x}px`;
@@ -176,159 +176,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 };
 
 export default ProjectCard;
-
-
-
-
-//---------
-// import React, { useState, useRef, useEffect } from "react";
-// import { useTranslation } from "react-i18next";
-// import { ProjectPreview } from "@/entities/project/project.types";
-// import "./ProjectCard.scss";
-
-// interface ProjectCardProps extends ProjectPreview {
-//   onClick?: () => void;
-// }
-
-// const ProjectCard: React.FC<ProjectCardProps> = ({
-//   titleKey,
-//   image,
-//   altKey,
-//   onClick,
-// }) => {
-//   const { t: tProjects } = useTranslation("projects");
-//   const { t: tCommon } = useTranslation("common");
-
-//   const [hovered, setHovered] = useState(false);
-//   const cardRef = useRef<HTMLDivElement | null>(null);
-
-//   const cursor = useRef({ x: 0, y: 0 });
-//   const viewPos = useRef({ x: 0, y: 0 });
-//   const lastMoveTs = useRef<number>(0);
-//   const rafRef = useRef<number | null>(null);
-
-//   const MAX_DIST = 50;
-//   const LERP = 0.18;
-//   const STOP_DELAY = 100;
-
-//   const clamp = (v: number, a: number, b: number) =>
-//     Math.max(a, Math.min(b, v));
-//   const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
-
-//   const handleMouseMove = (e: React.MouseEvent) => {
-//     if (!cardRef.current) return;
-//     const rect = cardRef.current.getBoundingClientRect();
-//     cursor.current.x = e.clientX - rect.left;
-//     cursor.current.y = e.clientY - rect.top;
-//     lastMoveTs.current = performance.now();
-//   };
-
-//   const update = () => {
-//     const now = performance.now();
-//     const moving = now - lastMoveTs.current < STOP_DELAY;
-
-//     let targetX = cursor.current.x;
-//     let targetY = cursor.current.y;
-
-//     if (moving && cardRef.current) {
-//       const rect = cardRef.current.getBoundingClientRect();
-//       const centerX = rect.width / 2;
-//       const centerY = rect.height / 2;
-
-//       let vx = cursor.current.x - centerX;
-//       let vy = cursor.current.y - centerY;
-//       const len = Math.hypot(vx, vy) || 1;
-//       const dist = clamp(len * 0.12, 10, MAX_DIST);
-//       vx = (vx / len) * dist;
-//       vy = (vy / len) * dist;
-
-//       targetX = cursor.current.x + vx;
-//       targetY = cursor.current.y + vy - 3;
-//     }
-
-//     viewPos.current.x = lerp(viewPos.current.x, targetX, LERP);
-//     viewPos.current.y = lerp(viewPos.current.y, targetY, LERP);
-
-//     const viewEl = cardRef.current?.querySelector<HTMLDivElement>(
-//       ".project-card__view-cursor"
-//     );
-//     if (viewEl) {
-//       viewEl.style.left = `${viewPos.current.x}px`;
-//       viewEl.style.top = `${viewPos.current.y}px`;
-//     }
-
-//     rafRef.current = requestAnimationFrame(update);
-//   };
-
-//   useEffect(() => {
-//     if (hovered) {
-//       viewPos.current.x = cursor.current.x;
-//       viewPos.current.y = cursor.current.y;
-//       lastMoveTs.current = performance.now();
-//       rafRef.current = requestAnimationFrame(update);
-//     } else {
-//       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-//       rafRef.current = null;
-
-//       const viewEl = cardRef.current?.querySelector<HTMLDivElement>(
-//         ".project-card__view-cursor"
-//       );
-//       if (viewEl) {
-//         viewEl.style.left = `${cursor.current.x}px`;
-//         viewEl.style.top = `${cursor.current.y}px`;
-//       }
-
-//       viewPos.current = { x: 0, y: 0 };
-//     }
-
-//     return () => {
-//       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-//     };
-//   }, [hovered]);
-
-//   return (
-//     <div
-//       className="project-card"
-//       ref={cardRef}
-//       onMouseEnter={() => setHovered(true)}
-//       onMouseLeave={() => setHovered(false)}
-//       onMouseMove={handleMouseMove}
-//       onClick={onClick}
-//     >
-//       <div className="project-card__image-wrapper">
-//         <picture>
-//           {/* MOBILE */}
-//           <source
-//             media="(max-width: 767px)"
-//             srcSet={`${image.mobile} 1x, ${image.mobile2x} 2x`}
-//           />
-
-//           {/* TABLET */}
-//           <source
-//             media="(max-width: 1279px)"
-//             srcSet={`${image.tablet} 1x, ${image.tablet2x} 2x`}
-//           />
-
-//           {/* DESKTOP */}
-//           <img
-//             src={image.desktop}
-//             srcSet={`${image.desktop2x} 2x`}
-//             alt={altKey ? tProjects(altKey) : tProjects("defaultAlt")}
-//             className="project-card__image"
-//             loading="lazy"
-//             decoding="async"
-//           />
-//         </picture>
-//         <h3 className="project-card__title">{tProjects(titleKey)}</h3>
-//         <span className="project-card__cursor-hint">{tProjects("projects.section.projectCardHint")}</span>
-//       </div>
-//       {hovered && (
-//         <div className="project-card__view-cursor">
-//           {tCommon("buttons.view")}
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default ProjectCard;

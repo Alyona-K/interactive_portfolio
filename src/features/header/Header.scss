@@ -126,12 +126,25 @@
     display: none;
 
     @include from-md {
-      display: grid;
-      grid-template-columns: 1fr 110px;
-      align-items: center;
-      justify-content: center;
-      margin-left: 100px;
+      // display: grid;
+      // grid-template-columns: 1fr 110px;
+      // align-items: center;
+      // justify-content: center;
+      // margin-left: 100px;
+      //----
+      // display: grid;
+      // grid-template-columns: minmax(0, 1fr) auto;
+      // align-items: center;
+      //     margin-left: 100px;
+      //   gap: 24px;
+      display: block;
+      position: relative;
     }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
   }
 
   &__links {
@@ -182,9 +195,16 @@
   }
 
   &__lang {
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-end;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     align-items: center;
-    justify-content: flex-end;
 
     @include from-md {
       gap: 13px;

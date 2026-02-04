@@ -20,7 +20,11 @@ export const projects: ProjectConfig[] = [
     challengesKey: "projects.portfolio.challenges",
     stackKey: "projects.portfolio.stack",
     links: [
-      { label: "Vercel", url: "https://interactive-portfolio-ak.vercel.app", type: "vercel" },
+      {
+        label: "Vercel",
+        url: "https://interactive-portfolio-ak.vercel.app",
+        type: "vercel",
+      },
       {
         label: "GitHub",
         url: "https://github.com/Alyona-K/interactive_portfolio",
