@@ -3,7 +3,7 @@
 
 .hero {
   // height: calc(100dvh + 20px);
-  height: calc(var(--vh, 1vh) * 100 + 20px);
+  min-height: calc(var(--vh, 1vh) * 100 + 20px);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -30,8 +30,6 @@ const Hero: React.FC<HeroProps> = ({ startIntro, onAnimationComplete }) => {
         // --- ENABLE SCROLL-BASED HERO EFFECTS ---
         animateHeroScroll();
 
-        ScrollTrigger.refresh();
-
         // --- EXECUTE OPTIONAL CALLBACK ---
         onAnimationComplete?.();
       });

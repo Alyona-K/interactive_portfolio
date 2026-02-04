@@ -54,14 +54,18 @@
     box-shadow: 0 3px 3px $color-black-pearl-30;
     display: flex;
     align-items: center;
+    justify-content: center;
     position: absolute;
     top: 15px;
     right: 15px;
     z-index: 10;
-    // transform: translateZ(0);
-    // pointer-events: auto;
     cursor: pointer;
-    will-change: background-color;
+    will-change: transform, background-color, color;
+
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
     transition:
       background-color $transition-300,
       color $transition-300;
@@ -86,7 +90,10 @@
     height: 22px;
     fill: currentColor;
     pointer-events: none;
+
     transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   &__image-wrapper {
